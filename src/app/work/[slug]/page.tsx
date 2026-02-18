@@ -39,6 +39,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                             alt={project.title}
                             fill
                             className="object-cover blur-sm scale-110"
+                            priority
+                            sizes="100vw"
+                            quality={90}
                         />
                     )}
                 </div>

@@ -24,6 +24,8 @@ export default function FullScreenProjectList({ projects }: { projects: Project[
                             fill
                             className="object-cover z-0"
                             priority={index === 0}
+                            sizes="100vw"
+                            quality={100}
                         />
                     )}
 

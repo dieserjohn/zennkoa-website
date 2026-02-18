@@ -27,8 +27,8 @@ export default function ProjectList({
                         <Link href={`/work/${project.slug}`} className="block">
                             <h3
                                 className={`text-4xl sm:text-6xl font-black uppercase tracking-tight transition-all duration-300 ${activeProject.slug === project.slug
-                                        ? "text-white translate-x-4"
-                                        : "text-neutral-700 hover:text-neutral-400"
+                                    ? "text-white translate-x-4"
+                                    : "text-neutral-700 hover:text-neutral-400"
                                     }`}
                             >
                                 {project.title}
@@ -72,6 +72,8 @@ export default function ProjectList({
                                             alt={project.title}
                                             fill
                                             className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                                            sizes="(max-width: 1024px) 100vw, 50vw"
+                                            quality={90}
                                         />
                                     )}
                                 </div>
