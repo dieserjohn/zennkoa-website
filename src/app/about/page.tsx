@@ -65,6 +65,9 @@ export default function AboutPage() {
                                 width={600}
                                 height={750}
                                 className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                quality={90}
+                                priority
                             />
                             {/* Overlay label */}
                             <div className="absolute bottom-6 left-6">
