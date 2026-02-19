@@ -41,30 +41,6 @@ export const projects: Project[] = [
         color: "#16213e",
     },
     {
-        slug: "lucky-slot",
-        title: "LuckySlot",
-        description:
-            "An engaging Minecraft minigame plugin featuring smooth slot machine animations and reward systems.",
-        tags: ["Java", "Minecraft", "Game Design"],
-        color: "#0f3460",
-    },
-    {
-        slug: "lobby-plugin",
-        title: "Lobby System",
-        description:
-            "A feature-rich lobby plugin for Minecraft servers with interactive menus and player management.",
-        tags: ["Java", "Minecraft", "Paper API"],
-        color: "#1a1a2e",
-    },
-    {
-        slug: "invoicing-app",
-        title: "Invoicing App",
-        description:
-            "A GoBD-compliant SaaS for freelancers and small businesses, handling invoices, products, and customers.",
-        tags: ["TypeScript", "React", "Node.js"],
-        color: "#16213e",
-    },
-    {
         slug: "portfolio",
         title: "Portfolio Website",
         description:

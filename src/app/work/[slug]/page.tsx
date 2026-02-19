@@ -124,12 +124,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </section>
             )}
 
-            {/* Gallery */}
-            {project.galleryImages && (
-                <section className="px-6 md:px-12 py-24 bg-neutral-900/30">
-                    {/* Placeholder for Gallery logic */}
-                </section>
-            )}
+
 
             {/* Show Main Image if available and not used in hero? Or just show it here clearly */}
             <section className="px-6 md:px-12 pb-32">
