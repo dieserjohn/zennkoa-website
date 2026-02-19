@@ -2,7 +2,7 @@ import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "@/components/Footer";
+
 
 // Force static generation for the known projects
 export function generateStaticParams() {
@@ -41,7 +41,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                             className="object-cover blur-sm scale-110"
                             priority
                             sizes="100vw"
-                            quality={90}
+                            quality={100}
                         />
                     )}
                 </div>
@@ -142,6 +142,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                 width={1920}
                                 height={1080}
                                 className="w-full h-auto"
+                                quality={100}
                             />
                         </div>
                     )}
@@ -159,7 +160,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         {nextProject.title}
                     </h2>
                 </Link>
-                <Footer />
+
             </section>
         </div>
     );

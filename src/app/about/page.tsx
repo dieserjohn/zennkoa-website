@@ -66,7 +66,7 @@ export default function AboutPage() {
                                 height={750}
                                 className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700"
                                 sizes="(max-width: 768px) 100vw, 50vw"
-                                quality={90}
+                                quality={100}
                                 priority
                             />
                             {/* Overlay label */}

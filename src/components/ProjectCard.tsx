@@ -59,6 +59,7 @@ export default function ProjectCard({
                                     width={1200}
                                     height={750}
                                     className="w-full h-auto"
+                                    quality={100}
                                 />
 
                                 {/* Subtle shine overlay */}
