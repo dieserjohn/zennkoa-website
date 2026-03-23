@@ -24,7 +24,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     const nextProject = projects[(currentIndex + 1) % projects.length];
 
     return (
-        <div className="bg-black min-h-screen">
+        <div className="bg-background min-h-screen">
             {/* Hero Section */}
             <section className="relative h-[80vh] flex flex-col justify-end px-6 md:px-12 pb-12 overflow-hidden">
                 {/* Background */}
@@ -45,38 +45,38 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         />
                     )}
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-[1]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-[1]" />
 
                 {/* Title */}
                 <div className="relative z-10 max-w-[1800px] mx-auto w-full">
-                    <Link href="/work" className="inline-block mb-8 text-sm uppercase tracking-[0.2em] text-neutral-400 hover:text-white transition-colors">
+                    <Link href="/work" className="inline-block mb-8 text-sm uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
                         ← Back to Work
                     </Link>
-                    <h1 className="text-6xl sm:text-8xl md:text-9xl font-black uppercase tracking-tighter text-white mb-6">
+                    <h1 className="text-6xl sm:text-8xl md:text-9xl font-black uppercase tracking-tighter text-foreground mb-6">
                         {project.title}
                     </h1>
-                    <p className="text-xl sm:text-2xl text-neutral-300 max-w-3xl font-light leading-relaxed">
+                    <p className="text-xl sm:text-2xl text-neutral-600 dark:text-neutral-300 max-w-3xl font-light leading-relaxed">
                         {project.description}
                     </p>
                 </div>
             </section>
 
             {/* Info Grid */}
-            <section className="px-6 md:px-12 py-24 border-b border-neutral-900">
+            <section className="px-6 md:px-12 py-24 border-b border-neutral-200 dark:border-neutral-900">
                 <div className="max-w-[1800px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
                     <div className="space-y-2">
                         <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 block">Role</span>
-                        <span className="text-lg text-white font-medium">{project.role || "Developer"}</span>
+                        <span className="text-lg text-foreground font-medium">{project.role || "Developer"}</span>
                     </div>
                     <div className="space-y-2">
                         <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 block">Year</span>
-                        <span className="text-lg text-white font-medium">{project.year || "2024"}</span>
+                        <span className="text-lg text-foreground font-medium">{project.year || "2024"}</span>
                     </div>
                     <div className="space-y-2 md:col-span-2">
                         <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 block">Tech Stack</span>
                         <div className="flex flex-wrap gap-2 mt-2">
                             {(project.techStack || project.tags).map(tag => (
-                                <span key={tag} className="px-3 py-1 border border-neutral-800 rounded-full text-sm text-neutral-300">
+                                <span key={tag} className="px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-full text-sm text-neutral-600 dark:text-neutral-300">
                                     {tag}
                                 </span>
                             ))}
@@ -97,7 +97,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <div className="lg:col-span-8 space-y-24">
                             {project.longDescription && (
                                 <div>
-                                    <p className="text-2xl sm:text-3xl md:text-4xl leading-tight font-light text-neutral-200">
+                                    <p className="text-2xl sm:text-3xl md:text-4xl leading-tight font-light text-neutral-800 dark:text-neutral-200">
                                         {project.longDescription}
                                     </p>
                                 </div>
@@ -106,14 +106,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                             {project.challenges && (
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                     <div>
-                                        <h3 className="text-white font-bold uppercase tracking-widest mb-4">The Challenge</h3>
-                                        <p className="text-neutral-400 leading-relaxed">
+                                        <h3 className="text-foreground font-bold uppercase tracking-widest mb-4">The Challenge</h3>
+                                        <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                             {project.challenges}
                                         </p>
                                     </div>
                                     <div>
-                                        <h3 className="text-white font-bold uppercase tracking-widest mb-4">The Solution</h3>
-                                        <p className="text-neutral-400 leading-relaxed">
+                                        <h3 className="text-foreground font-bold uppercase tracking-widest mb-4">The Solution</h3>
+                                        <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                             {project.solution}
                                         </p>
                                     </div>
@@ -130,7 +130,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <section className="px-6 md:px-12 pb-32">
                 <div className="max-w-[1800px] mx-auto">
                     {project.image && (
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/20 border border-neutral-800">
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/20 border border-neutral-200 dark:border-neutral-800">
                             <Image
                                 src={project.image}
                                 alt="Project Screenshot"
@@ -146,12 +146,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
 
             {/* Next Project Footer */}
-            <section className="border-t border-neutral-800">
-                <Link href={`/work/${nextProject.slug}`} className="block group relative overflow-hidden py-32 md:py-48 text-center bg-neutral-950 hover:bg-neutral-900 transition-colors duration-500">
-                    <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-4 block group-hover:text-white transition-colors">
+            <section className="border-t border-neutral-200 dark:border-neutral-800">
+                <Link href={`/work/${nextProject.slug}`} className="block group relative overflow-hidden py-32 md:py-48 text-center bg-neutral-100 dark:bg-neutral-950 hover:bg-neutral-200 dark:hover:bg-neutral-900 transition-colors duration-500">
+                    <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-4 block group-hover:text-black dark:group-hover:text-white transition-colors">
                         Next Project
                     </span>
-                    <h2 className="text-5xl sm:text-7xl md:text-9xl font-black uppercase tracking-tighter text-neutral-800 group-hover:text-white transition-colors duration-500">
+                    <h2 className="text-5xl sm:text-7xl md:text-9xl font-black uppercase tracking-tighter text-neutral-400 dark:text-neutral-800 group-hover:text-black dark:group-hover:text-white transition-colors duration-500">
                         {nextProject.title}
                     </h2>
                 </Link>

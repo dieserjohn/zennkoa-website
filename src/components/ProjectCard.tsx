@@ -75,7 +75,7 @@ export default function ProjectCard({
                         {project.tags.map((tag) => (
                             <span
                                 key={tag}
-                                className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 border border-neutral-800 rounded-full px-3 py-1"
+                                className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 border border-neutral-200 dark:border-neutral-800 rounded-full px-3 py-1"
                             >
                                 {tag}
                             </span>
@@ -86,11 +86,11 @@ export default function ProjectCard({
                         {project.title}
                     </h3>
 
-                    <p className="text-base text-neutral-400 leading-relaxed">
+                    <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
                         {project.description}
                     </p>
 
-                    <span className="inline-block text-sm text-neutral-500 group-hover:text-white transition-colors">
+                    <span className="inline-block text-sm text-neutral-500 group-hover:text-black dark:group-hover:text-white transition-colors">
                         View project →
                     </span>
                 </div>

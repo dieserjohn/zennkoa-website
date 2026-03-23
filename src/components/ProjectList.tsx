@@ -27,14 +27,14 @@ export default function ProjectList({
                         <Link href={`/work/${project.slug}`} className="block">
                             <h3
                                 className={`text-4xl sm:text-6xl font-black uppercase tracking-tight transition-all duration-300 ${activeProject.slug === project.slug
-                                    ? "text-white translate-x-4"
-                                    : "text-neutral-700 hover:text-neutral-400"
+                                    ? "text-black dark:text-white translate-x-4"
+                                    : "text-neutral-300 dark:text-neutral-700 hover:text-neutral-500 dark:hover:text-neutral-400"
                                     }`}
                             >
                                 {project.title}
                             </h3>
                             <div
-                                className={`h-px bg-neutral-800 mt-8 transition-all duration-300 ${activeProject.slug === project.slug ? "w-full" : "w-12 group-hover:w-24"
+                                className={`h-px bg-neutral-200 dark:bg-neutral-800 mt-8 transition-all duration-300 ${activeProject.slug === project.slug ? "w-full" : "w-12 group-hover:w-24"
                                     }`}
                             />
                         </Link>
@@ -44,7 +44,7 @@ export default function ProjectList({
                 {showViewAll && (
                     <Link
                         href="/work"
-                        className="mt-12 text-xs uppercase tracking-[0.2em] text-neutral-500 hover:text-white transition-colors self-start"
+                        className="mt-12 text-xs uppercase tracking-[0.2em] text-neutral-500 hover:text-black dark:hover:text-white transition-colors self-start"
                     >
                         View all work →
                     </Link>
@@ -79,21 +79,21 @@ export default function ProjectList({
                                 </div>
 
                                 {/* Content Overlay */}
-                                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent">
+                                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-white/90 dark:from-black/90 to-transparent">
                                     <div className="flex flex-wrap gap-2 mb-4">
                                         {project.tags.map((tag) => (
                                             <span
                                                 key={tag}
-                                                className="text-[10px] uppercase tracking-[0.2em] text-white/70 border border-white/20 px-2 py-1 rounded-full"
+                                                className="text-[10px] uppercase tracking-[0.2em] text-black/70 dark:text-white/70 border border-black/20 dark:border-white/20 px-2 py-1 rounded-full"
                                             >
                                                 {tag}
                                             </span>
                                         ))}
                                     </div>
-                                    <p className="text-neutral-300 line-clamp-2 leading-relaxed">
+                                    <p className="text-neutral-700 dark:text-neutral-300 line-clamp-2 leading-relaxed">
                                         {project.description}
                                     </p>
-                                    <span className="inline-block mt-4 text-xs uppercase tracking-[0.2em] text-white border-b border-white/30 pb-1 group-hover:border-white transition-colors">
+                                    <span className="inline-block mt-4 text-xs uppercase tracking-[0.2em] text-black dark:text-white border-b border-black/30 dark:border-white/30 pb-1 group-hover:border-black dark:group-hover:border-white transition-colors">
                                         View Project
                                     </span>
                                 </div>

@@ -8,6 +8,12 @@
 }
 
 :root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --accent: #3b5bdb;
+}
+
+.dark {
   --background: #0a0a0a;
   --foreground: #f5f5f5;
   --accent: #3b5bdb;
@@ -20,8 +26,8 @@ body {
 }
 
 ::selection {
-  background: #f5f5f5;
-  color: #0a0a0a;
+  background: var(--foreground);
+  color: var(--background);
 }
 
 /* Marquee animation */

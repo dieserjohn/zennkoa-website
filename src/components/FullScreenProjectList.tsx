@@ -70,11 +70,11 @@ export default function FullScreenProjectList({ projects }: { projects: Project[
             ))}
 
             {/* Footer Section */}
-            <section className="h-screen w-full snap-start relative flex flex-col justify-end bg-black">
+            <section className="h-screen w-full snap-start relative flex flex-col justify-end bg-background">
                 <div className="flex-1 flex items-center justify-center">
                     <div className="text-center">
                         <p className="text-neutral-500 text-sm uppercase tracking-[0.3em] mb-6">That's all folks</p>
-                        <Link href="/" className="text-4xl font-bold text-white hover:text-neutral-300 transition-colors">
+                        <Link href="/" className="text-4xl font-bold text-foreground hover:text-neutral-500 dark:hover:text-neutral-300 transition-colors">
                             Back to Home
                         </Link>
                     </div>

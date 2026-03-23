@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 
 export default function ImpressumPage() {
     return (
-        <div className="pt-32 pb-24 px-6 md:px-12 min-h-screen bg-black text-white">
+        <div className="pt-32 pb-24 px-6 md:px-12 min-h-screen bg-background text-foreground">
             <div className="mx-auto max-w-[1800px]">
-                <h1 className="text-6xl sm:text-9xl font-black uppercase tracking-tighter mb-24 text-neutral-100">
+                <h1 className="text-6xl sm:text-9xl font-black uppercase tracking-tighter mb-24 text-foreground">
                     Impressum
                 </h1>
 
@@ -17,15 +17,15 @@ export default function ImpressumPage() {
                     {/* Column 1: Angaben gemäß § 5 TMG */}
                     <div className="space-y-8">
                         <div>
-                            <h2 className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-6 border-b border-neutral-800 pb-2">
+                            <h2 className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-6 border-b border-neutral-200 dark:border-neutral-800 pb-2">
                                 Angaben gemäß § 5 TMG
                             </h2>
-                            <p className="text-xl sm:text-2xl font-light leading-relaxed text-neutral-300">
-                                John "Zennkoa"
+                            <p className="text-xl sm:text-2xl font-light leading-relaxed text-neutral-700 dark:text-neutral-300">
+                                John-Phillip Delenschke
                                 <br />
-                                Musterstraße 1
+                                Graf-v.-Stauffenberg-Str. 7
                                 <br />
-                                12345 Musterstadt
+                                18437 Stralsund
                                 <br />
                                 Deutschland
                             </p>
@@ -35,10 +35,10 @@ export default function ImpressumPage() {
                     {/* Column 2: Kontakt */}
                     <div className="space-y-8">
                         <div>
-                            <h2 className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-6 border-b border-neutral-800 pb-2">
+                            <h2 className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-6 border-b border-neutral-200 dark:border-neutral-800 pb-2">
                                 Kontakt
                             </h2>
-                            <p className="text-xl sm:text-2xl font-light leading-relaxed text-neutral-300 hover:text-white transition-colors">
+                            <p className="text-xl sm:text-2xl font-light leading-relaxed text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors">
                                 <a href="mailto:hello@zennkoa.de">hello@zennkoa.de</a>
                             </p>
                         </div>
@@ -47,10 +47,10 @@ export default function ImpressumPage() {
                     {/* Column 3: Haftungsausschluss / Disclaimer */}
                     <div className="space-y-8 lg:col-span-1">
                         <div>
-                            <h2 className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-6 border-b border-neutral-800 pb-2">
+                            <h2 className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-6 border-b border-neutral-200 dark:border-neutral-800 pb-2">
                                 Haftungsausschluss
                             </h2>
-                            <p className="text-sm text-neutral-400 leading-relaxed text-justify">
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed text-justify">
                                 Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die
                                 Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich
                                 deren Betreiber verantwortlich.

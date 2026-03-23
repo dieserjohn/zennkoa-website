@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="border-t border-neutral-800 bg-[#0a0a0a]">
+        <footer className="border-t border-neutral-200 dark:border-neutral-800 bg-background text-foreground">
             <div className="mx-auto max-w-[1800px] px-6 md:px-12 py-32">
                 <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
                     {/* Left Column: Contact CTA */}
@@ -19,7 +19,7 @@ export default function Footer() {
                                 <br />
                                 zennkoa.de
                             </h2>
-                            <span className="inline-block mt-4 text-sm uppercase tracking-[0.2em] border-b border-white pb-1 group-hover:border-neutral-400 group-hover:text-neutral-400 transition-colors">
+                            <span className="inline-block mt-4 text-sm uppercase tracking-[0.2em] border-b border-foreground pb-1 group-hover:border-neutral-400 group-hover:text-neutral-400 transition-colors">
                                 Send Email ↗
                             </span>
                         </a>
@@ -55,20 +55,20 @@ export default function Footer() {
                         </div>
 
                         {/* Bottom Info */}
-                        <div className="mt-16 pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div className="mt-16 pt-8 border-t border-neutral-200 dark:border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4">
                             <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-600">
                                 © {new Date().getFullYear()} Zennkoa
                             </span>
                             <div className="flex gap-6">
                                 <Link
                                     href="/impressum"
-                                    className="text-[10px] uppercase tracking-[0.2em] text-neutral-600 hover:text-white transition-colors"
+                                    className="text-[10px] uppercase tracking-[0.2em] text-neutral-600 hover:text-black dark:hover:text-white transition-colors"
                                 >
                                     Impressum
                                 </Link>
                                 <Link
                                     href="/datenschutz"
-                                    className="text-[10px] uppercase tracking-[0.2em] text-neutral-600 hover:text-white transition-colors"
+                                    className="text-[10px] uppercase tracking-[0.2em] text-neutral-600 hover:text-black dark:hover:text-white transition-colors"
                                 >
                                     Datenschutz
                                 </Link>

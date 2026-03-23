@@ -18,7 +18,7 @@ export default function Home() {
           <h1 className="text-7xl sm:text-[10rem] lg:text-[14rem] font-black tracking-[-0.04em] leading-[0.85] uppercase">
             Zenn
             <br />
-            <span className="text-transparent" style={{ WebkitTextStroke: "2px #f5f5f5" }}>
+            <span className="text-transparent" style={{ WebkitTextStroke: "2px var(--foreground)" }}>
               koa
             </span>
           </h1>
@@ -32,13 +32,13 @@ export default function Home() {
             <div className="flex items-center gap-6">
               <Link
                 href="/work"
-                className="text-xs uppercase tracking-[0.2em] border border-neutral-700 px-6 py-3 hover:bg-white hover:text-black transition-all duration-300"
+                className="text-xs uppercase tracking-[0.2em] border border-neutral-300 dark:border-neutral-700 px-6 py-3 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
               >
                 View Works
               </Link>
               <Link
                 href="/about"
-                className="text-xs uppercase tracking-[0.2em] text-neutral-500 hover:text-white transition-colors"
+                className="text-xs uppercase tracking-[0.2em] text-neutral-500 hover:text-black dark:hover:text-white transition-colors"
               >
                 About me →
               </Link>
@@ -47,35 +47,35 @@ export default function Home() {
         </div>
 
         {/* Decorative line */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-neutral-800" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-neutral-200 dark:bg-neutral-800" />
       </section>
 
       {/* Marquee */}
-      <section className="py-8 border-b border-neutral-800 overflow-hidden">
+      <section className="py-8 border-b border-neutral-200 dark:border-neutral-800 overflow-hidden">
         <div className="animate-marquee flex whitespace-nowrap">
           {[...Array(2)].map((_, i) => (
             <span key={i} className="flex items-center gap-8 mr-8">
-              <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-800">
+              <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-200 dark:text-neutral-800">
                 Minecraft
               </span>
               <span className="text-neutral-700">✦</span>
-              <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-800">
+              <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-200 dark:text-neutral-800">
                 Web Dev
               </span>
               <span className="text-neutral-700">✦</span>
-              <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-800">
+              <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-200 dark:text-neutral-800">
                 Java
               </span>
               <span className="text-neutral-700">✦</span>
-              <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-800">
+              <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-200 dark:text-neutral-800">
                 TypeScript
               </span>
               <span className="text-neutral-700">✦</span>
-              <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-800">
+              <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-200 dark:text-neutral-800">
                 React
               </span>
               <span className="text-neutral-700">✦</span>
-              <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-800">
+              <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-200 dark:text-neutral-800">
                 Next.js
               </span>
               <span className="text-neutral-700">✦</span>

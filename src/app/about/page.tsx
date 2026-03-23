@@ -38,7 +38,7 @@ export default function AboutPage() {
                             <h1 className="text-6xl sm:text-8xl lg:text-[10rem] font-black uppercase tracking-[-0.04em] leading-[0.85] mb-12">
                                 Zen
                                 <br />
-                                <span className="text-transparent" style={{ WebkitTextStroke: "2px #f5f5f5" }}>
+                                <span className="text-transparent" style={{ WebkitTextStroke: "2px var(--foreground)" }}>
                                     nkoa
                                 </span>
                             </h1>
@@ -46,7 +46,7 @@ export default function AboutPage() {
                             <div className="space-y-6 text-sm text-neutral-400 leading-relaxed max-w-md">
                                 <p>
                                     Hey! I&apos;m John, but most people online know me as{" "}
-                                    <span className="text-white font-medium">Zennkoa</span>.
+                                    <span className="text-foreground font-medium">Zennkoa</span>.
                                     I&apos;m a 25-year-old developer from Germany.
                                 </p>
                                 <p>
@@ -81,7 +81,7 @@ export default function AboutPage() {
             </section>
 
             {/* Stats */}
-            <section className="px-6 md:px-12 py-24 border-t border-neutral-800">
+            <section className="px-6 md:px-12 py-24 border-t border-neutral-200 dark:border-neutral-800">
                 <div className="mx-auto max-w-[1800px]">
                     <div className="grid grid-cols-3 gap-8">
                         {experience.map((item) => (
@@ -99,7 +99,7 @@ export default function AboutPage() {
             </section>
 
             {/* Skills */}
-            <section className="px-6 md:px-12 py-24 border-t border-neutral-800">
+            <section className="px-6 md:px-12 py-24 border-t border-neutral-200 dark:border-neutral-800">
                 <div className="mx-auto max-w-[1800px]">
                     <div className="grid gap-16 lg:grid-cols-[300px_1fr] items-start">
                         <div>
@@ -117,9 +117,9 @@ export default function AboutPage() {
                             {skills.map((skill) => (
                                 <div
                                     key={skill}
-                                    className="border border-neutral-800 px-6 py-8 hover:border-neutral-600 transition-colors group"
+                                    className="border border-neutral-200 dark:border-neutral-800 px-6 py-8 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors group"
                                 >
-                                    <span className="text-lg font-medium group-hover:text-white transition-colors text-neutral-300">
+                                    <span className="text-lg font-medium group-hover:text-black dark:group-hover:text-white transition-colors text-neutral-600 dark:text-neutral-300">
                                         {skill}
                                     </span>
                                 </div>

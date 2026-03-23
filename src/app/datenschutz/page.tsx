@@ -19,7 +19,7 @@ export default function DatenschutzPage() {
                             Verantwortlicher
                         </p>
                         <p className="text-neutral-300">
-                            John &quot;Zennkoa&quot;
+                            John-Phillip Delenschke
                             <br />
                             E-Mail: hello@zennkoa.de
                         </p>
