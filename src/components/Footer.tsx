@@ -33,9 +33,9 @@ export default function Footer() {
                             </p>
                             <ul className="space-y-4">
                                 {[
-                                    { label: "GitHub", href: "https://github.com/zennkoa" },
-                                    { label: "Discord", href: "https://discord.gg/zennkoa" },
-                                    { label: "X (Twitter)", href: "https://twitter.com/zennkoa" },
+                                    { label: "GitHub", href: "https://github.com/dieserjxhn" },
+                                    { label: "LinkedIn", href: "https://www.linkedin.com/in/john-delenschke-7316aa173/" },
+                                    { label: "X (Twitter)", href: "https://twitter.com/dieseracc" },
                                 ].map((link) => (
                                     <li key={link.label}>
                                         <a
