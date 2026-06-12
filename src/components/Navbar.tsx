@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/work", label: "Works" },
-  { href: "/about", label: "Me" },
+  { href: "/", label: "Start" },
+  { href: "/work", label: "Projekte" },
+  { href: "/about", label: "Über mich" },
 ];
 
 export default function Navbar() {

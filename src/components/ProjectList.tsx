@@ -46,7 +46,7 @@ export default function ProjectList({
                         href="/work"
                         className="mt-12 text-xs uppercase tracking-[0.2em] text-neutral-500 hover:text-black dark:hover:text-white transition-colors self-start"
                     >
-                        View all work →
+                        Alle Projekte ansehen →
                     </Link>
                 )}
             </div>
@@ -73,7 +73,7 @@ export default function ProjectList({
                                             fill
                                             className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
                                             sizes="(max-width: 1024px) 100vw, 50vw"
-                                            quality={100}
+                                            quality={80}
                                         />
                                     )}
                                 </div>
@@ -94,7 +94,7 @@ export default function ProjectList({
                                         {project.description}
                                     </p>
                                     <span className="inline-block mt-4 text-xs uppercase tracking-[0.2em] text-black dark:text-white border-b border-black/30 dark:border-white/30 pb-1 group-hover:border-black dark:group-hover:border-white transition-colors">
-                                        View Project
+                                        Projekt ansehen
                                     </span>
                                 </div>
                             </Link>

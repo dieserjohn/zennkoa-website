@@ -11,10 +11,54 @@ const inter = Inter({
   variable: "--font-geist-sans",
 });
 
+const siteUrl = "https://zennkoa.de";
+const title = "Zennkoa – Web Developer in Stralsund";
+const description =
+  "Zennkoa (John Delenschke) – Web Developer & Minecraft Plugin Developer based in Stralsund, Germany. Building clean, modern websites and software.";
+
 export const metadata: Metadata = {
-  title: "Zennkoa – Developer & Creator",
-  description:
-    "Portfolio of Zennkoa – Minecraft Plugin Developer & Web Developer.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: "%s | Zennkoa",
+  },
+  description,
+  keywords: [
+    "Webentwickler Stralsund",
+    "Web Developer Stralsund",
+    "Webdesign Stralsund",
+    "Softwareentwickler Stralsund",
+    "Next.js Entwickler",
+    "Minecraft Plugin Developer",
+  ],
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: "Zennkoa",
+    images: [
+      {
+        url: "/profile.jpg",
+        width: 1200,
+        height: 1500,
+        alt: "Zennkoa",
+      },
+    ],
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/profile.jpg"],
+  },
+  other: {
+    "geo.placename": "Stralsund",
+    "geo.region": "DE-MV",
+    "geo.position": "54.3093;13.0910",
+    ICBM: "54.3093, 13.0910",
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="de" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased bg-background text-foreground transition-colors duration-300`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />

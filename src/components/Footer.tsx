@@ -8,7 +8,7 @@ export default function Footer() {
                     {/* Left Column: Contact CTA */}
                     <div className="w-full lg:w-1/2">
                         <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 mb-8">
-                            Get in touch
+                            Kontakt
                         </p>
                         <a
                             href="mailto:hello@zennkoa.de"
@@ -20,7 +20,7 @@ export default function Footer() {
                                 zennkoa.de
                             </h2>
                             <span className="inline-block mt-4 text-sm uppercase tracking-[0.2em] border-b border-foreground pb-1 group-hover:border-neutral-400 group-hover:text-neutral-400 transition-colors">
-                                Send Email ↗
+                                E-Mail senden ↗
                             </span>
                         </a>
                     </div>
@@ -29,7 +29,7 @@ export default function Footer() {
                     <div className="w-full lg:w-1/2 flex flex-col justify-between">
                         <div>
                             <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 mb-8">
-                                Socials
+                                Social Media
                             </p>
                             <ul className="space-y-4">
                                 {[

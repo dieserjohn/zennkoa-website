@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Impressum – Zennkoa",
+    title: "Impressum",
     description: "Impressum von zennkoa.de",
 };
 

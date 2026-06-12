@@ -25,7 +25,7 @@ export default function FullScreenProjectList({ projects }: { projects: Project[
                             className="object-cover z-0"
                             priority={index === 0}
                             sizes="100vw"
-                            quality={100}
+                            quality={80}
                         />
                     )}
 
@@ -56,14 +56,14 @@ export default function FullScreenProjectList({ projects }: { projects: Project[
                             href={`/work/${project.slug}`}
                             className="inline-block px-8 py-4 bg-white text-black font-bold uppercase tracking-[0.2em] hover:bg-neutral-200 transition-colors rounded-full"
                         >
-                            View Case Study
+                            Case Study ansehen
                         </Link>
                     </div>
 
                     {/* Scroll Indicator */}
                     {index < projects.length - 1 && (
                         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-                            <span className="text-white text-[10px] uppercase tracking-[0.3em] opacity-70">Scroll</span>
+                            <span className="text-white text-[10px] uppercase tracking-[0.3em] opacity-70">Scrollen</span>
                         </div>
                     )}
                 </section>
@@ -73,9 +73,9 @@ export default function FullScreenProjectList({ projects }: { projects: Project[
             <section className="h-screen w-full snap-start relative flex flex-col justify-end bg-background">
                 <div className="flex-1 flex items-center justify-center">
                     <div className="text-center">
-                        <p className="text-neutral-500 text-sm uppercase tracking-[0.3em] mb-6">That's all folks</p>
+                        <p className="text-neutral-500 text-sm uppercase tracking-[0.3em] mb-6">Das war&apos;s</p>
                         <Link href="/" className="text-4xl font-bold text-foreground hover:text-neutral-500 dark:hover:text-neutral-300 transition-colors">
-                            Back to Home
+                            Zur Startseite
                         </Link>
                     </div>
                 </div>

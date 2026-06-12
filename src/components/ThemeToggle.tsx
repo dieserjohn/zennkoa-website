@@ -22,7 +22,7 @@ export function ThemeToggle() {
         <button
             onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
             className="flex items-center justify-center p-2 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors text-neutral-800 dark:text-neutral-200"
-            aria-label="Toggle theme"
+            aria-label="Design umschalten"
         >
             {currentTheme === "dark" ? (
                 <Moon className="h-5 w-5" />

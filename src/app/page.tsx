@@ -5,14 +5,50 @@ import { projects } from "@/data/projects";
 
 const featuredProjects = projects.slice(0, 3);
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "John Delenschke",
+  alternateName: "Zennkoa",
+  url: "https://zennkoa.de",
+  jobTitle: "Webentwickler",
+  description:
+    "Webentwickler aus Stralsund – moderne Websites, Webanwendungen und skalierbare Backend-Systeme.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Stralsund",
+    addressRegion: "Mecklenburg-Vorpommern",
+    addressCountry: "DE",
+  },
+  homeLocation: {
+    "@type": "Place",
+    name: "Stralsund, Germany",
+  },
+  areaServed: [
+    { "@type": "City", name: "Stralsund" },
+    { "@type": "AdministrativeArea", name: "Mecklenburg-Vorpommern" },
+    { "@type": "Country", name: "Germany" },
+  ],
+  knowsAbout: ["Webentwicklung", "Backend-Entwicklung", "Java", "TypeScript", "React", "Next.js"],
+  sameAs: [
+    "https://github.com/dieserjxhn",
+    "https://www.linkedin.com/in/john-delenschke-7316aa173/",
+    "https://twitter.com/dieseracc",
+  ],
+};
+
 export default function Home() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       {/* Hero */}
       <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 relative overflow-hidden">
         <div className="mx-auto w-full max-w-[1800px]">
           <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 mb-8">
-            Developer & Creator
+            Webentwickler in Stralsund
           </p>
 
           <h1 className="text-7xl sm:text-[10rem] lg:text-[14rem] font-black tracking-[-0.04em] leading-[0.85] uppercase">
@@ -25,8 +61,9 @@ export default function Home() {
 
           <div className="mt-12 flex items-start justify-between flex-wrap gap-8">
             <p className="max-w-sm text-sm text-neutral-400 leading-relaxed">
-              I build Minecraft plugins and web applications.
-              Focused on crafting clean, useful software from Germany.
+              Ich entwickle moderne Websites und Webanwendungen – mit Fokus
+              auf cleanem Code, durchdachtem Design und skalierbaren
+              Backend-Systemen.
             </p>
 
             <div className="flex items-center gap-6">
@@ -34,13 +71,13 @@ export default function Home() {
                 href="/work"
                 className="text-xs uppercase tracking-[0.2em] border border-neutral-300 dark:border-neutral-700 px-6 py-3 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
               >
-                View Works
+                Projekte ansehen
               </Link>
               <Link
                 href="/about"
                 className="text-xs uppercase tracking-[0.2em] text-neutral-500 hover:text-black dark:hover:text-white transition-colors"
               >
-                About me →
+                Über mich →
               </Link>
             </div>
           </div>
@@ -56,11 +93,11 @@ export default function Home() {
           {[...Array(2)].map((_, i) => (
             <span key={i} className="flex items-center gap-8 mr-8">
               <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-200 dark:text-neutral-800">
-                Minecraft
+                Webentwicklung
               </span>
               <span className="text-neutral-700">✦</span>
               <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-200 dark:text-neutral-800">
-                Web Dev
+                Backend
               </span>
               <span className="text-neutral-700">✦</span>
               <span className="text-6xl sm:text-8xl font-black uppercase tracking-tight text-neutral-200 dark:text-neutral-800">

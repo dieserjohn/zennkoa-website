@@ -3,8 +3,8 @@ import { projects } from "@/data/projects";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Work – Zennkoa",
-    description: "Projects and work by Zennkoa.",
+    title: "Projekte",
+    description: "Projekte und Arbeiten von Zennkoa.",
 };
 
 export default function WorkPage() {

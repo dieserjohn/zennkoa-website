@@ -6,7 +6,7 @@ export default function FeaturedProjects({ projects }: { projects: Project[] }) 
         <section className="px-6 md:px-12 py-32 border-b border-neutral-200 dark:border-neutral-800">
             <div className="mx-auto max-w-[1800px]">
                 <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 mb-16">
-                    Selected Projects
+                    Ausgewählte Projekte
                 </p>
                 <ProjectList projects={projects} showViewAll={true} />
             </div>

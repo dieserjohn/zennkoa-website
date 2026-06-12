@@ -59,7 +59,7 @@ export default function ProjectCard({
                                     width={1200}
                                     height={750}
                                     className="w-full h-auto"
-                                    quality={100}
+                                    quality={80}
                                 />
 
                                 {/* Subtle shine overlay */}
@@ -91,7 +91,7 @@ export default function ProjectCard({
                     </p>
 
                     <span className="inline-block text-sm text-neutral-500 group-hover:text-black dark:group-hover:text-white transition-colors">
-                        View project →
+                        Projekt ansehen →
                     </span>
                 </div>
             </div>

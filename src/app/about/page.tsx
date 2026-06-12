@@ -2,9 +2,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About – Zennkoa",
+    title: "Über mich",
     description:
-        "About Zennkoa – Developer, Minecraft enthusiast, and film lover.",
+        "Über Zennkoa – Webentwickler aus Stralsund, spezialisiert auf moderne Websites, Webanwendungen und skalierbare Backend-Systeme.",
 };
 
 const skills = [
@@ -17,9 +17,9 @@ const skills = [
 ];
 
 const experience = [
-    { label: "Minecraft Plugins", years: "5+" },
-    { label: "Web Development", years: "3+" },
-    { label: "Projects Shipped", years: "10+" },
+    { label: "Jahre Backend-Entwicklung", years: "5+" },
+    { label: "Jahre Webentwicklung", years: "3+" },
+    { label: "Projekte umgesetzt", years: "10+" },
 ];
 
 export default function AboutPage() {
@@ -32,7 +32,7 @@ export default function AboutPage() {
                         {/* Text */}
                         <div>
                             <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 mb-8">
-                                About Me
+                                Über mich
                             </p>
 
                             <h1 className="text-6xl sm:text-8xl lg:text-[10rem] font-black uppercase tracking-[-0.04em] leading-[0.85] mb-12">
@@ -45,14 +45,17 @@ export default function AboutPage() {
 
                             <div className="space-y-6 text-sm text-neutral-400 leading-relaxed max-w-md">
                                 <p>
-                                    Hey! I&apos;m John, but most people online know me as{" "}
+                                    Hallo, ich bin John Delenschke – online auch bekannt als{" "}
                                     <span className="text-foreground font-medium">Zennkoa</span>.
-                                    I&apos;m a 25-year-old developer from Germany.
+                                    Ich bin Webentwickler aus{" "}
+                                    <span className="text-foreground font-medium">Stralsund</span>{" "}
+                                    und entwickle moderne, performante Websites und Webanwendungen.
                                 </p>
                                 <p>
-                                    I build Minecraft plugins and web applications. When I&apos;m
-                                    not coding, you&apos;ll probably find me watching films or
-                                    playing Minecraft.
+                                    Mein Fokus liegt auf cleanem Code, durchdachtem Design und
+                                    skalierbaren Lösungen – von responsiven Frontends bis hin zu
+                                    robusten Backend-Systemen und APIs für anspruchsvolle Plattformen
+                                    mit hoher Nutzerzahl.
                                 </p>
                             </div>
                         </div>
@@ -66,13 +69,13 @@ export default function AboutPage() {
                                 height={750}
                                 className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700"
                                 sizes="(max-width: 768px) 100vw, 50vw"
-                                quality={100}
+                                quality={80}
                                 priority
                             />
                             {/* Overlay label */}
                             <div className="absolute bottom-6 left-6">
                                 <span className="text-[10px] uppercase tracking-[0.3em] text-white/70 bg-black/50 px-3 py-1 backdrop-blur-sm">
-                                    Dev & Creator
+                                    Web Developer
                                 </span>
                             </div>
                         </div>
@@ -104,10 +107,10 @@ export default function AboutPage() {
                     <div className="grid gap-16 lg:grid-cols-[300px_1fr] items-start">
                         <div>
                             <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 mb-4">
-                                Technologies
+                                Technologien
                             </p>
                             <h2 className="text-4xl sm:text-5xl font-black uppercase tracking-tight">
-                                My
+                                Mein
                                 <br />
                                 Stack
                             </h2>
