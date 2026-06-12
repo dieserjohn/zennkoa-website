@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
     return (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 text-center">
-            <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 mb-8">
+            <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 dark:text-neutral-400 mb-8">
                 Fehler 404
             </p>
 
@@ -21,7 +21,7 @@ export default function NotFound() {
                 </span>
             </h1>
 
-            <p className="mt-12 max-w-sm text-sm text-neutral-400 leading-relaxed">
+            <p className="mt-12 max-w-sm text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Die gesuchte Seite existiert nicht oder wurde verschoben.
             </p>
 

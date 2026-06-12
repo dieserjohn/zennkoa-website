@@ -92,15 +92,15 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <section className="px-6 md:px-12 py-24 border-b border-neutral-200 dark:border-neutral-900">
                 <div className="max-w-[1800px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
                     <div className="space-y-2">
-                        <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 block">Rolle</span>
+                        <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 block">Rolle</span>
                         <span className="text-lg text-foreground font-medium">{project.role || "Entwickler"}</span>
                     </div>
                     <div className="space-y-2">
-                        <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 block">Jahr</span>
+                        <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 block">Jahr</span>
                         <span className="text-lg text-foreground font-medium">{project.year || "2024"}</span>
                     </div>
                     <div className="space-y-2 md:col-span-2">
-                        <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 block">Tech-Stack</span>
+                        <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 block">Tech-Stack</span>
                         <div className="flex flex-wrap gap-2 mt-2">
                             {(project.techStack || project.tags).map(tag => (
                                 <span key={tag} className="px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-full text-sm text-neutral-600 dark:text-neutral-300">
@@ -117,7 +117,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 <section className="px-6 md:px-12 py-32">
                     <div className="max-w-[1800px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
                         <div className="lg:col-span-4">
-                            <h2 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-8 sticky top-32">
+                            <h2 className="text-sm uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 mb-8 sticky top-32">
                                 Über das Projekt
                             </h2>
                         </div>
@@ -175,10 +175,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             {/* Next Project Footer */}
             <section className="border-t border-neutral-200 dark:border-neutral-800">
                 <Link href={`/work/${nextProject.slug}`} className="block group relative overflow-hidden py-32 md:py-48 text-center bg-neutral-100 dark:bg-neutral-950 hover:bg-neutral-200 dark:hover:bg-neutral-900 transition-colors duration-500">
-                    <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-4 block group-hover:text-black dark:group-hover:text-white transition-colors">
+                    <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 mb-4 block group-hover:text-black dark:group-hover:text-white transition-colors">
                         Nächstes Projekt
                     </span>
-                    <h2 className="text-5xl sm:text-7xl md:text-9xl font-black uppercase tracking-tighter text-neutral-400 dark:text-neutral-800 group-hover:text-black dark:group-hover:text-white transition-colors duration-500">
+                    <h2 className="text-5xl sm:text-7xl md:text-9xl font-black uppercase tracking-tighter text-neutral-500 dark:text-neutral-800 group-hover:text-black dark:group-hover:text-white transition-colors duration-500">
                         {nextProject.title}
                     </h2>
                 </Link>

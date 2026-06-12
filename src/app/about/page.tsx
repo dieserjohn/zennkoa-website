@@ -31,7 +31,7 @@ export default function AboutPage() {
                     <div className="grid gap-16 lg:grid-cols-[1fr_1fr] items-center">
                         {/* Text */}
                         <div>
-                            <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 mb-8">
+                            <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 dark:text-neutral-400 mb-8">
                                 Über mich
                             </p>
 
@@ -43,7 +43,7 @@ export default function AboutPage() {
                                 </span>
                             </h1>
 
-                            <div className="space-y-6 text-sm text-neutral-400 leading-relaxed max-w-md">
+                            <div className="space-y-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-md">
                                 <p>
                                     Hallo, ich bin John Delenschke – online auch bekannt als{" "}
                                     <span className="text-foreground font-medium">Zennkoa</span>.
@@ -92,7 +92,7 @@ export default function AboutPage() {
                                 <p className="text-5xl sm:text-7xl font-black tracking-tight">
                                     {item.years}
                                 </p>
-                                <p className="mt-2 text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                                <p className="mt-2 text-[10px] uppercase tracking-[0.3em] text-neutral-500 dark:text-neutral-400">
                                     {item.label}
                                 </p>
                             </div>
@@ -106,7 +106,7 @@ export default function AboutPage() {
                 <div className="mx-auto max-w-[1800px]">
                     <div className="grid gap-16 lg:grid-cols-[300px_1fr] items-start">
                         <div>
-                            <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 mb-4">
+                            <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 dark:text-neutral-400 mb-4">
                                 Technologien
                             </p>
                             <h2 className="text-4xl sm:text-5xl font-black uppercase tracking-tight">

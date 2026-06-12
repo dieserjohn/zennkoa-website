@@ -28,7 +28,7 @@ export default function ProjectList({
                             <h3
                                 className={`text-4xl sm:text-6xl font-black uppercase tracking-tight transition-all duration-300 ${activeProject.slug === project.slug
                                     ? "text-black dark:text-white translate-x-4"
-                                    : "text-neutral-300 dark:text-neutral-700 hover:text-neutral-500 dark:hover:text-neutral-400"
+                                    : "text-neutral-500 dark:text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300"
                                     }`}
                             >
                                 {project.title}
@@ -44,7 +44,7 @@ export default function ProjectList({
                 {showViewAll && (
                     <Link
                         href="/work"
-                        className="mt-12 text-xs uppercase tracking-[0.2em] text-neutral-500 hover:text-black dark:hover:text-white transition-colors self-start"
+                        className="mt-12 text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors self-start"
                     >
                         Alle Projekte ansehen →
                     </Link>

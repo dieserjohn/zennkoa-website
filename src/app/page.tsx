@@ -47,7 +47,7 @@ export default function Home() {
       {/* Hero */}
       <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 relative overflow-hidden">
         <div className="mx-auto w-full max-w-[1800px]">
-          <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 mb-8">
+          <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 dark:text-neutral-400 mb-8">
             Webentwickler in Stralsund
           </p>
 
@@ -60,7 +60,7 @@ export default function Home() {
           </h1>
 
           <div className="mt-12 flex items-start justify-between flex-wrap gap-8">
-            <p className="max-w-sm text-sm text-neutral-400 leading-relaxed">
+            <p className="max-w-sm text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
               Ich entwickle moderne Websites und Webanwendungen – mit Fokus
               auf cleanem Code, durchdachtem Design und skalierbaren
               Backend-Systemen.
@@ -75,7 +75,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/about"
-                className="text-xs uppercase tracking-[0.2em] text-neutral-500 hover:text-black dark:hover:text-white transition-colors"
+                className="text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
               >
                 Über mich →
               </Link>
@@ -88,7 +88,7 @@ export default function Home() {
       </section>
 
       {/* Marquee */}
-      <section className="py-8 border-b border-neutral-200 dark:border-neutral-800 overflow-hidden">
+      <section aria-hidden="true" className="py-8 border-b border-neutral-200 dark:border-neutral-800 overflow-hidden">
         <div className="animate-marquee flex whitespace-nowrap">
           {[...Array(2)].map((_, i) => (
             <span key={i} className="flex items-center gap-8 mr-8">

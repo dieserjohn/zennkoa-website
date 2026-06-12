@@ -17,7 +17,7 @@ export default function ImpressumPage() {
                     {/* Column 1: Angaben gemäß § 5 TMG */}
                     <div className="space-y-8">
                         <div>
-                            <h2 className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-6 border-b border-neutral-200 dark:border-neutral-800 pb-2">
+                            <h2 className="text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 mb-6 border-b border-neutral-200 dark:border-neutral-800 pb-2">
                                 Angaben gemäß § 5 TMG
                             </h2>
                             <p className="text-xl sm:text-2xl font-light leading-relaxed text-neutral-700 dark:text-neutral-300">
@@ -35,7 +35,7 @@ export default function ImpressumPage() {
                     {/* Column 2: Kontakt */}
                     <div className="space-y-8">
                         <div>
-                            <h2 className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-6 border-b border-neutral-200 dark:border-neutral-800 pb-2">
+                            <h2 className="text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 mb-6 border-b border-neutral-200 dark:border-neutral-800 pb-2">
                                 Kontakt
                             </h2>
                             <p className="text-xl sm:text-2xl font-light leading-relaxed text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors">
@@ -47,7 +47,7 @@ export default function ImpressumPage() {
                     {/* Column 3: Haftungsausschluss / Disclaimer */}
                     <div className="space-y-8 lg:col-span-1">
                         <div>
-                            <h2 className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-6 border-b border-neutral-200 dark:border-neutral-800 pb-2">
+                            <h2 className="text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 mb-6 border-b border-neutral-200 dark:border-neutral-800 pb-2">
                                 Haftungsausschluss
                             </h2>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed text-justify">

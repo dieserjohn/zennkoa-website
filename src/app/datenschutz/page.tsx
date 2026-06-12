@@ -7,18 +7,18 @@ export const metadata: Metadata = {
 
 export default function DatenschutzPage() {
     return (
-        <div className="pt-32 pb-24 px-8">
+        <div className="pt-32 pb-24 px-8 bg-background text-foreground">
             <div className="mx-auto max-w-3xl">
                 <h1 className="text-5xl sm:text-7xl font-black uppercase tracking-tight mb-12">
                     Datenschutz
                 </h1>
 
-                <div className="space-y-8 text-sm text-neutral-400 leading-relaxed">
+                <div className="space-y-8 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                     <div>
-                        <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 mb-3">
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 dark:text-neutral-400 mb-3">
                             Verantwortlicher
                         </p>
-                        <p className="text-neutral-300">
+                        <p className="text-neutral-700 dark:text-neutral-300">
                             John-Phillip Delenschke
                             <br />
                             E-Mail: hello@zennkoa.de
@@ -26,7 +26,7 @@ export default function DatenschutzPage() {
                     </div>
 
                     <div>
-                        <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 mb-3">
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 dark:text-neutral-400 mb-3">
                             Erhebung und Speicherung personenbezogener Daten
                         </p>
                         <p>
@@ -38,7 +38,7 @@ export default function DatenschutzPage() {
                     </div>
 
                     <div>
-                        <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 mb-3">
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 dark:text-neutral-400 mb-3">
                             Kontaktaufnahme
                         </p>
                         <p>
@@ -49,7 +49,7 @@ export default function DatenschutzPage() {
                     </div>
 
                     <div>
-                        <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 mb-3">
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 dark:text-neutral-400 mb-3">
                             Ihre Rechte
                         </p>
                         <p>

@@ -73,7 +73,7 @@ export default function FullScreenProjectList({ projects }: { projects: Project[
             <section className="h-screen w-full snap-start relative flex flex-col justify-end bg-background">
                 <div className="flex-1 flex items-center justify-center">
                     <div className="text-center">
-                        <p className="text-neutral-500 text-sm uppercase tracking-[0.3em] mb-6">Das war&apos;s</p>
+                        <p className="text-neutral-500 dark:text-neutral-400 text-sm uppercase tracking-[0.3em] mb-6">Das war&apos;s</p>
                         <Link href="/" className="text-4xl font-bold text-foreground hover:text-neutral-500 dark:hover:text-neutral-300 transition-colors">
                             Zur Startseite
                         </Link>
