@@ -8,6 +8,7 @@ const navLinks = [
   { href: "/", label: "Start" },
   { href: "/work", label: "Projekte" },
   { href: "/about", label: "Über mich" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export default function Navbar() {
