@@ -28,7 +28,7 @@ export async function sendContactEmail(
 
     try {
         await resend.emails.send({
-            from: "Kontaktformular <onboarding@resend.dev>",
+            from: "Kontaktformular <kontakt@zennkoa.de>",
             to: "hello@zennkoa.de",
             replyTo: email,
             subject: subject ? `[Kontakt] ${subject}` : `[Kontakt] Neue Nachricht von ${name}`,
