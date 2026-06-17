@@ -63,9 +63,21 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
                 {/* Title */}
                 <div className="relative z-10 max-w-[1800px] mx-auto w-full pt-32">
-                    <Link href="/work" className="inline-block mb-8 text-sm uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
-                        ← Zurück zu Projekten
-                    </Link>
+                    <div className="flex items-center gap-6 mb-8">
+                        <Link href="/work" className="text-sm uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
+                            ← Zurück zu Projekten
+                        </Link>
+                        {project.liveUrl && (
+                            <a
+                                href={project.liveUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                            >
+                                Website besuchen ↗
+                            </a>
+                        )}
+                    </div>
                     <h1 className="text-6xl sm:text-8xl md:text-9xl font-black uppercase tracking-tighter text-foreground mb-6">
                         {project.title}
                     </h1>

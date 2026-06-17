@@ -12,38 +12,37 @@ const inter = Inter({
 });
 
 const siteUrl = "https://zennkoa.de";
-const title = "Zennkoa – Web Developer in Stralsund";
+const title = "John Delenschke – Webentwickler in Stralsund";
 const description =
-  "Zennkoa (John Delenschke) – Web Developer & Minecraft Plugin Developer based in Stralsund, Germany. Building clean, modern websites and software.";
+  "John Delenschke (Zennkoa) – Webentwickler aus Stralsund. Ich entwickle moderne, performante Websites und Webanwendungen für Unternehmen, Vereine und Selbstständige in Stralsund und Mecklenburg-Vorpommern.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: title,
-    template: "%s | Zennkoa",
+    template: "%s | John Delenschke",
   },
   description,
+  authors: [{ name: "John Delenschke", url: siteUrl }],
+  creator: "John Delenschke",
   keywords: [
     "Webentwickler Stralsund",
-    "Web Developer Stralsund",
     "Webdesign Stralsund",
+    "Webdesigner Stralsund",
+    "Website erstellen Stralsund",
+    "Homepage erstellen Stralsund",
     "Softwareentwickler Stralsund",
-    "Next.js Entwickler",
-    "Minecraft Plugin Developer",
+    "Webentwicklung Mecklenburg-Vorpommern",
+    "John Delenschke",
   ],
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
     title,
     description,
     url: siteUrl,
-    siteName: "Zennkoa",
-    images: [
-      {
-        url: "/profile.jpg",
-        width: 1200,
-        height: 1500,
-        alt: "Zennkoa",
-      },
-    ],
+    siteName: "John Delenschke",
     locale: "de_DE",
     type: "website",
   },
@@ -51,7 +50,16 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/profile.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   other: {
     "geo.placename": "Stralsund",

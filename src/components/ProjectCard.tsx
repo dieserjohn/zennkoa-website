@@ -17,6 +17,7 @@ export interface Project {
     solution?: string;
     galleryImages?: string[];
     link?: string;
+    liveUrl?: string;
 }
 
 export default function ProjectCard({

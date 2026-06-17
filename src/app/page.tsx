@@ -11,8 +11,9 @@ const personJsonLd = {
   alternateName: "Zennkoa",
   url: "https://zennkoa.de",
   jobTitle: "Webentwickler",
+  image: "https://zennkoa.de/profile.jpg",
   description:
-    "Webentwickler aus Stralsund – moderne Websites, Webanwendungen und skalierbare Backend-Systeme.",
+    "Webentwickler aus Stralsund – moderne, performante Websites und Webanwendungen für Unternehmen, Vereine und Selbstständige in Stralsund und Mecklenburg-Vorpommern.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Stralsund",

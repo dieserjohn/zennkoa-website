@@ -47,6 +47,6 @@ export const projects: Project[] = [
         challenges: "Der Verein benötigte eine Lösung, die auch ohne technisches Know-how eigenständig gepflegt werden kann – gleichzeitig sollte die Seite modern und emotional ansprechend wirken. Zudem mussten Spendenformulare, Projektseiten und ein Blog so integriert werden, dass sie sich natürlich in das Gesamtbild einfügen.",
         solution: "Ich entwickelte ein individuell angepasstes WordPress-Theme mit warmer Farbwelt und klarer Typografie, das die emotionale Mission des Vereins transportiert. Die Redaktionsoberfläche wurde so vereinfacht, dass Vereinsmitglieder Inhalte ohne Entwicklerhilfe pflegen können. Spendenbuttons, Statistiken und Projektübersichten wurden als wiederverwendbare Blöcke umgesetzt.",
         galleryImages: ["/projects/wp-demo.png", "/projects/wp-demo-full.png"],
-        link: "https://wpdemo.zennkoa.de",
+        liveUrl: "https://wpdemo.zennkoa.de",
     },
 ];
