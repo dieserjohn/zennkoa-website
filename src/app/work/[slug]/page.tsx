@@ -142,14 +142,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <div className="lg:col-span-8 space-y-24">
                             {project.longDescription && (
                                 <div>
-                                    <p className="text-2xl sm:text-3xl md:text-4xl leading-tight font-light text-neutral-800 dark:text-neutral-200">
+                                    <p className="text-lg sm:text-xl leading-relaxed text-neutral-600 dark:text-neutral-400">
                                         {project.longDescription}
                                     </p>
                                 </div>
                             )}
 
                             {project.challenges && (
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-neutral-200 dark:border-neutral-800">
                                     <div>
                                         <h3 className="text-foreground font-bold uppercase tracking-widest mb-4">Die Herausforderung</h3>
                                         <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
