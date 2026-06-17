@@ -16,6 +16,7 @@ export interface Project {
     challenges?: string;
     solution?: string;
     galleryImages?: string[];
+    link?: string;
 }
 
 export default function ProjectCard({
@@ -27,8 +28,11 @@ export default function ProjectCard({
 }) {
     const isEven = index % 2 === 0;
 
+    const href = project.link ?? `/work/${project.slug}`;
+    const isExternal = !!project.link;
+
     return (
-        <Link href={`/work/${project.slug}`} className="group block">
+        <Link href={href} className="group block" {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
             <div
                 className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"
                     } gap-8 lg:gap-12 items-center`}

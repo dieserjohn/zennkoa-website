@@ -53,29 +53,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     return (
         <div className="bg-background min-h-screen">
             {/* Hero Section */}
-            <section className="relative h-[80vh] flex flex-col justify-end px-6 md:px-12 pb-12 overflow-hidden">
-                {/* Background */}
+            <section className="relative min-h-[70vh] flex flex-col justify-end px-6 md:px-12 pb-12 overflow-hidden">
+                {/* Background color layer only */}
                 <div
-                    className="absolute inset-0 z-0 opacity-40"
-                    style={{ backgroundColor: project.color }}
-                >
-                    {/* If we had a high-res hero image, it would go here. Using the thumb for now if avail, blurred? */}
-                    {project.image && (
-                        <Image
-                            src={project.image}
-                            alt={project.title}
-                            fill
-                            className="object-cover blur-sm scale-110"
-                            priority
-                            sizes="100vw"
-                            quality={80}
-                        />
-                    )}
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-[1]" />
+                    className="absolute inset-0 z-0"
+                    style={{ backgroundColor: project.color, opacity: 0.15 }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent z-[1]" />
 
                 {/* Title */}
-                <div className="relative z-10 max-w-[1800px] mx-auto w-full">
+                <div className="relative z-10 max-w-[1800px] mx-auto w-full pt-32">
                     <Link href="/work" className="inline-block mb-8 text-sm uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
                         ← Zurück zu Projekten
                     </Link>
@@ -87,6 +74,25 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     </p>
                 </div>
             </section>
+
+            {/* Main Image */}
+            {project.image && (
+                <section className="px-6 md:px-12 pb-0">
+                    <div className="max-w-[1800px] mx-auto">
+                        <div className="relative rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-2xl shadow-black/10 dark:shadow-black/40">
+                            <Image
+                                src={project.image}
+                                alt={`${project.title} Screenshot`}
+                                width={1920}
+                                height={1080}
+                                className="w-full h-auto"
+                                priority
+                                quality={80}
+                            />
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* Info Grid */}
             <section className="px-6 md:px-12 py-24 border-b border-neutral-200 dark:border-neutral-900">
@@ -153,28 +159,37 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
 
 
-            {/* Show Main Image if available and not used in hero? Or just show it here clearly */}
-            <section className="px-6 md:px-12 pb-32">
-                <div className="max-w-[1800px] mx-auto">
-                    {project.image && (
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/20 border border-neutral-200 dark:border-neutral-800">
-                            <Image
-                                src={project.image}
-                                alt={`${project.title} Screenshot`}
-                                width={1920}
-                                height={1080}
-                                className="w-full h-auto"
-                                quality={80}
-                            />
-                        </div>
-                    )}
-                </div>
-            </section>
+            {/* Gallery */}
+            {project.galleryImages && project.galleryImages.length > 1 && (
+                <section className="px-6 md:px-12 py-16">
+                    <div className="max-w-[1800px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {project.galleryImages.slice(1).map((src, i) => (
+                            <div
+                                key={i}
+                                className="relative rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800"
+                            >
+                                <Image
+                                    src={src}
+                                    alt={`${project.title} Screenshot ${i + 2}`}
+                                    width={1920}
+                                    height={1080}
+                                    className="w-full h-auto"
+                                    quality={80}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            )}
 
 
             {/* Next Project Footer */}
             <section className="border-t border-neutral-200 dark:border-neutral-800">
-                <Link href={`/work/${nextProject.slug}`} className="block group relative overflow-hidden py-32 md:py-48 text-center bg-neutral-100 dark:bg-neutral-950 hover:bg-neutral-200 dark:hover:bg-neutral-900 transition-colors duration-500">
+                <Link
+                    href={nextProject.link ?? `/work/${nextProject.slug}`}
+                    {...(nextProject.link ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="block group relative overflow-hidden py-32 md:py-48 text-center bg-neutral-100 dark:bg-neutral-950 hover:bg-neutral-200 dark:hover:bg-neutral-900 transition-colors duration-500"
+                >
                     <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 mb-4 block group-hover:text-black dark:group-hover:text-white transition-colors">
                         Nächstes Projekt
                     </span>
@@ -182,7 +197,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         {nextProject.title}
                     </h2>
                 </Link>
-
             </section>
         </div>
     );

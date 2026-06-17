@@ -43,7 +43,11 @@ export default function FullScreenProjectList({ projects }: { projects: Project[
                         </div>
 
                         <h2 className="text-5xl sm:text-7xl md:text-9xl font-black uppercase tracking-tight text-white mb-8 drop-shadow-2xl">
-                            <Link href={`/work/${project.slug}`} className="hover:text-neutral-300 transition-colors">
+                            <Link
+                                href={project.link ?? `/work/${project.slug}`}
+                                className="hover:text-neutral-300 transition-colors"
+                                {...(project.link ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                            >
                                 {project.title}
                             </Link>
                         </h2>
@@ -53,10 +57,11 @@ export default function FullScreenProjectList({ projects }: { projects: Project[
                         </p>
 
                         <Link
-                            href={`/work/${project.slug}`}
+                            href={project.link ?? `/work/${project.slug}`}
                             className="inline-block px-8 py-4 bg-white text-black font-bold uppercase tracking-[0.2em] hover:bg-neutral-200 transition-colors rounded-full"
+                            {...(project.link ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                         >
-                            Case Study ansehen
+                            {project.link ? "Website besuchen" : "Case Study ansehen"}
                         </Link>
                     </div>
 

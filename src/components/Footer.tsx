@@ -33,7 +33,7 @@ export default function Footer() {
                             </p>
                             <ul className="space-y-4">
                                 {[
-                                    { label: "GitHub", href: "https://github.com/dieserjxhn" },
+                                    { label: "GitHub", href: "https://github.com/dieserjohn" },
                                     { label: "LinkedIn", href: "https://www.linkedin.com/in/john-delenschke-7316aa173/" },
                                     { label: "X (Twitter)", href: "https://twitter.com/dieseracc" },
                                 ].map((link) => (

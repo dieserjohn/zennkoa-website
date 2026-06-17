@@ -33,19 +33,20 @@ export const projects: Project[] = [
         "galleryImages": ["/projects/baltic.png"]
     },
     {
-        slug: "ban-system",
-        title: "Ban System Dashboard",
+        slug: "wp-demo",
+        title: "Herzkinder Ostfriesland",
         description:
-            "Ein Full-Stack-Webdashboard zur Verwaltung von Nutzersperren, entwickelt mit Next.js und einer REST-API im Backend.",
-        tags: ["TypeScript", "Next.js", "React"],
-        color: "#16213e",
-    },
-    {
-        slug: "portfolio",
-        title: "Portfolio Website",
-        description:
-            "Diese minimalistische Portfolio-Website, entwickelt mit Next.js und Tailwind CSS.",
-        tags: ["TypeScript", "Next.js", "Tailwind CSS"],
-        color: "#0f3460",
+            "Vereinswebsite für eine gemeinnützige Organisation – gebaut mit WordPress, individuellem Theme und optimierter Performance.",
+        tags: ["WordPress", "PHP", "Webdesign"],
+        color: "#c0392b",
+        image: "/projects/wp-demo.png",
+        year: "2026",
+        role: "Webentwickler & Designer",
+        longDescription: "Herzkinder Ostfriesland e.V. ist ein gemeinnütziger Verein, der Kinder mit angeborenem Herzfehler und ihre Familien in Ostfriesland unterstützt. Für den Verein entwickelte ich eine moderne, barrierefreie WordPress-Website, die die Arbeit und Projekte des Vereins professionell präsentiert und gleichzeitig Spendenaufrufe und Mitgliedschaften nahtlos integriert.",
+        techStack: ["WordPress", "PHP", "Custom Theme", "CSS", "Elementor"],
+        challenges: "Der Verein benötigte eine Lösung, die auch ohne technisches Know-how eigenständig gepflegt werden kann – gleichzeitig sollte die Seite modern und emotional ansprechend wirken. Zudem mussten Spendenformulare, Projektseiten und ein Blog so integriert werden, dass sie sich natürlich in das Gesamtbild einfügen.",
+        solution: "Ich entwickelte ein individuell angepasstes WordPress-Theme mit warmer Farbwelt und klarer Typografie, das die emotionale Mission des Vereins transportiert. Die Redaktionsoberfläche wurde so vereinfacht, dass Vereinsmitglieder Inhalte ohne Entwicklerhilfe pflegen können. Spendenbuttons, Statistiken und Projektübersichten wurden als wiederverwendbare Blöcke umgesetzt.",
+        galleryImages: ["/projects/wp-demo.png", "/projects/wp-demo-full.png"],
+        link: "https://wpdemo.zennkoa.de",
     },
 ];

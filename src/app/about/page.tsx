@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -133,6 +134,28 @@ export default function AboutPage() {
             </section>
 
 
+            {/* CTA */}
+            <section className="px-6 md:px-12 py-24 border-t border-neutral-200 dark:border-neutral-800">
+                <div className="mx-auto max-w-[1800px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+                    <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-xs leading-relaxed">
+                        Du hast ein Projekt im Kopf? Ich freue mich über deine Nachricht.
+                    </p>
+                    <div className="flex gap-6 items-center">
+                        <a
+                            href="mailto:hello@zennkoa.de"
+                            className="text-xs uppercase tracking-[0.2em] border border-neutral-300 dark:border-neutral-700 px-6 py-3 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+                        >
+                            Kontakt aufnehmen
+                        </a>
+                        <Link
+                            href="/work"
+                            className="text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                        >
+                            Projekte ansehen →
+                        </Link>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
