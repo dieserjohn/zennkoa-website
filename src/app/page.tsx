@@ -121,6 +121,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services */}
+      <section className="px-6 md:px-12 py-32 border-b border-neutral-200 dark:border-neutral-800">
+        <div className="mx-auto max-w-[1800px]">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
+            <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 dark:text-neutral-400">
+              Leistungen
+            </p>
+            <Link
+              href="/leistungen"
+              className="text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors self-start lg:self-auto"
+            >
+              Alle Leistungen →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-200 dark:bg-neutral-800">
+            {[
+              {
+                title: "Website & Webdesign",
+                description: "Individuelle Websites, die gut aussehen und funktionieren – egal ob Landing Page, Vereinsseite oder Unternehmensauftritt.",
+                tags: ["WordPress", "Ghost CMS", "Statisch", "Next.js"],
+              },
+              {
+                title: "Design & Entwicklung",
+                description: "Ich übernehme beides: vom ersten Entwurf bis zum fertigen Code. Kein Designstudio, keine Agentur – ein Ansprechpartner.",
+                tags: ["UI-Design", "Responsive", "Dark Mode", "Accessibility"],
+              },
+              {
+                title: "Wartung & Support",
+                description: "Updates, Anpassungen, Fehler beheben – ich bleibe auch nach dem Launch ansprechbar, damit deine Website zuverlässig läuft.",
+                tags: ["Updates", "Hosting", "Backups", "Anpassungen"],
+              },
+            ].map((service) => (
+              <div key={service.title} className="bg-background p-8 lg:p-12 flex flex-col gap-6">
+                <h3 className="text-xl font-black uppercase tracking-tight">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed flex-1">
+                  {service.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {service.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800 px-2 py-1"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Featured Work */}
       <FeaturedProjects projects={featuredProjects} />
 
