@@ -67,6 +67,19 @@ const services = [
         ],
         tags: ["React", "Node.js", "TypeScript", "REST API"],
     },
+    {
+        number: "06",
+        title: "Hosting",
+        description: "Wenn ich deine Seite hoste, läuft sie auf meiner eigenen Hosting-Plattform – dort kannst du Domains, E-Mail-Postfächer und Datenbanken selbst verwalten, ganz ohne mich fragen zu müssen.",
+        details: [
+            "Domains, SSL und E-Mail-Postfächer selbst verwalten",
+            "SSL-Zertifikate werden automatisch eingerichtet",
+            "FTP/SFTP-Zugang und Datenbankverwaltung inklusive",
+            "Ideal für: Websites, die ich für dich baue oder betreue",
+        ],
+        tags: ["Webhosting", "E-Mail", "SSL", "Datenbanken"],
+        link: { href: "https://portal.zennkoa.de", label: "portal.zennkoa.de ansehen" },
+    },
 ];
 
 export default function LeistungenPage() {
@@ -134,6 +147,16 @@ export default function LeistungenPage() {
                                         </span>
                                     ))}
                                 </div>
+                                {service.link && (
+                                    <a
+                                        href={service.link.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                                    >
+                                        {service.link.label} →
+                                    </a>
+                                )}
                             </div>
                         </div>
                     ))}
