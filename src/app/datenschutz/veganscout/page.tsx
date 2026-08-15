@@ -171,11 +171,30 @@ export default function VeganScoutDatenschutzPage() {
 
                     <Section label="Standort">
                         <p>
-                            Auf der Karte der genannten Orte kann der eigene Standort eingeblendet werden. Die
-                            Standortermittlung erfolgt ausschließlich auf dem Gerät durch das Betriebssystem;
-                            der Standort wird <strong>nicht an den Server übertragen</strong> und nicht
-                            gespeichert. Ohne Freigabe funktioniert die Karte unverändert, nur ohne die eigene
-                            Position.
+                            Der Standort wird nur nach ausdrücklicher Freigabe und nur dann ermittelt, wenn Sie
+                            die Umkreissuche oder die Karte selbst aufrufen. Es gibt zwei Verwendungen, die sich
+                            unterscheiden:
+                        </p>
+                        <ul className="list-disc pl-5 space-y-1.5">
+                            <li>
+                                <strong>Auf der Karte</strong> der genannten Orte wird die eigene Position nur
+                                auf dem Gerät angezeigt. Sie wird nicht übertragen.
+                            </li>
+                            <li>
+                                <strong>Für die Umkreissuche</strong> („In deiner Nähe“) werden Breiten- und
+                                Längengrad an unseren Server übermittelt, um Orte im Umkreis zu ermitteln. Die
+                                Koordinaten werden dafür bereits auf dem Gerät auf zwei Nachkommastellen
+                                gerundet, was etwa einem Kilometer entspricht – eine genauere Position verlässt
+                                das Gerät nicht. Der übermittelte Wert wird ausschließlich zur Berechnung der
+                                Antwort verwendet und <strong>nicht gespeichert</strong>; er wird keinem Konto
+                                zugeordnet, auch nicht bei angemeldeten Nutzern.
+                            </li>
+                        </ul>
+                        <p>
+                            Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO, erteilt über
+                            die Standortfreigabe des Betriebssystems. Sie können sie jederzeit in den
+                            iOS-Einstellungen widerrufen. Ohne Freigabe bleibt die App vollständig nutzbar,
+                            lediglich die Umkreissuche entfällt und die Karte zeigt keine eigene Position.
                         </p>
                     </Section>
 
